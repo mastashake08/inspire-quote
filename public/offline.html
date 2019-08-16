@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{env('APP_NAME')}}</title>
+        <title>Inspire</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -65,54 +65,15 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{$quote}}
+                    You must be online in order to use this application!
                 </div>
 
-                <div class="links">
-                    <a href="https://jyroneparker.com">Meet The Creator</a>
-                    <a href="https://youtube.com/c/jyroneparker">Youtube</a>
-                    <a href="https://twitter.com/mastashake08">Twitter</a>
-                    <a href="https://github.com/mastashake08">GitHub</a>
-                </div>
+
             </div>
         </div>
-        <script>
-        // This is the service worker with the Advanced caching
 
-        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-
-        // Check compatibility for the browser we're running this in
-        if ("serviceWorker" in navigator) {
-        if (navigator.serviceWorker.controller) {
-          console.log("[PWA Builder] active service worker found, no need to register");
-        } else {
-          // Register the service worker
-          navigator.serviceWorker
-            .register("pwabuilder-sw.js", {
-              scope: "./"
-            })
-            .then(function (reg) {
-              console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
-            });
-        }
-        }
-
-        </script>
     </body>
 </html>

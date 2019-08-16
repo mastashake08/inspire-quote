@@ -1,0 +1,13 @@
+{"name" : "Inspire",
+    "short_name" : "Inspire",
+    "description" : "Shows a random inspiration quote",
+    "start_url" : "https://inspire.jyroneparker.com",
+    "display" : "standalone",
+    "lang" : "English",
+    "orientation" : "any",
+    "icons" : [
+        {
+            "src": "inspire-logo.png",
+            "sizes": "2921x3030"
+        }
+    ]}
