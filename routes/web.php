@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Foundation\Inspiring;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $with = [
+      'quote' => Inspiring::quote()
+    ];
+    return view('welcome')->with($with);
 });
