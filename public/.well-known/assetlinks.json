@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "xyz.appmaker.xwvrao",
+      "sha256_cert_fingerprints": ["44:A2:56:77:99:93:9B:21:64:ED:B5:21:AD:51:C4:67:62:9F:CF:DA:D6:4C:76:8D:A3:B4:3E:BF:A4:E5:1B:62"]
+    }
+  }
+]
